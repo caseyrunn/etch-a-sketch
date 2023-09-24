@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     border-style: solid;
-    border-color: red;
+    border-color: black;
     width: 500px;
     height: 500px;
 }
@@ -16,7 +16,8 @@
 
 .columnDiv {
     border-style: solid;
-    border-color: yellow;
+    border-color: black;
+    border-width: 1px;
     flex-grow: 1;
 }
 
