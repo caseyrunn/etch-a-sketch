@@ -6,7 +6,6 @@ for (let i = 0; i < 16; i ++){
     for(let i = 0; i < 16; i ++){
         let columnDiv = document.createElement('div');
         columnDiv.classList.add('columnDiv');
-        columnDiv.textContent = "A"
         rowDiv.appendChild(columnDiv);
     }
     container.appendChild(rowDiv);

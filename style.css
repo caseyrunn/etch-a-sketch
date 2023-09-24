@@ -1,19 +1,22 @@
 .container {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     border-style: solid;
     border-color: red;
+    width: 500px;
+    height: 500px;
 }
 
 .rowDiv {
     display: flex;
     justify-content: center;
-    border-style: solid;
-    border-color: green;
+    flex-grow: 1;
 }
 
 .columnDiv {
     border-style: solid;
     border-color: yellow;
+    flex-grow: 1;
 }
 
