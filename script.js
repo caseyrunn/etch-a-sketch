@@ -1,6 +1,11 @@
 let container = document.querySelector('.container');
 
+let newGridButton = document.querySelector('.button')
+
 window.addEventListener("load", buildGrid(16))
+
+newGridButton.addEventListener('click', makeNewGrid)
+
 
 function buildGrid(gridNumber){
     while (container.firstChild) {
@@ -21,15 +26,11 @@ function buildGrid(gridNumber){
     }
 }
 
-function makeNewGrid(){
-    let gridNumber = getGridNumber();
-    buildGrid(gridNumber);
-}
-
 function getGridNumber(){
     return prompt("How many squares?");
 }
 
-let newGridButton = document.querySelector('.button')
-
-newGridButton.addEventListener('click', makeNewGrid)
+function buildNewGrid(){
+    let gridNumber = getGridNumber();
+    buildGrid(gridNumber);
+}
