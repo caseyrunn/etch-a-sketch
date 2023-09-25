@@ -1,10 +1,9 @@
 let container = document.querySelector('.container');
 
-let newGridButton = document.querySelector('.button')
 
 window.addEventListener("load", buildGrid(16))
 
-newGridButton.addEventListener('click', makeNewGrid)
+
 
 
 function buildGrid(gridNumber){
@@ -27,10 +26,19 @@ function buildGrid(gridNumber){
 }
 
 function getGridNumber(){
-    return prompt("How many squares?");
+    return prompt("Pick a number between 1 and 100")
+}
+
+function checkGridNumber(gridNumber){
+    return ((gridNumber >= 1) && (gridNumber <= 100)) ? true : false;
 }
 
 function buildNewGrid(){
     let gridNumber = getGridNumber();
-    buildGrid(gridNumber);
+    let isGridNumberValid = checkGridNumber(gridNumber);
+    if (isGridNumberValid == true) {
+        buildGrid(gridNumber);
+    }else {
+        alert("Invalid response. Try again!");
+    }
 }
